@@ -33,6 +33,9 @@ class Calculator {
     }
 
     chooseComputation(operator){
+        
+        this.operator = operator
+        
         if(this.currentOperand === "") return
         if(this.previousOperand !== ""){
             this.compute()
