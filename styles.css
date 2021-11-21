@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Code Latin', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    cursor: pointer;
+    border: solid white 1px;
+    outline: none;
+    font-size: 1.5em;
+    background-color: rgba(199, 236, 238, 0.5);
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: rgba(199, 236, 238, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+    grid-column: 1 / -1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.output .previous-operator {
+    font-size: 1.5em;
+}
+
+.output .current-operator {
+    font-size: 2.5em;
+}
+
