@@ -19,12 +19,13 @@ class Calculator {
     }
 
     appendNumber(number){
-        if(number === "." && this.currentOperand.includes(".")) return;
+        if(number === "." && this.currentOperand.includes(".")) return
         this.currentOperand = this.currentOperand.toString()+number.toString()
 
     }
 
     equal(){
+        if(this.currentOperand === "" || this.previousOperand === "") return
         this.compute()
         this.previousOperand = ""
         this.operator = undefined
@@ -43,7 +44,7 @@ class Calculator {
     }
 
     compute(){
-        
+
         const prev = parseFloat(this.previousOperand)
         const curr = parseFloat(this.currentOperand)
 
