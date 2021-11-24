@@ -1,5 +1,3 @@
-import { Calculator } from './calculator.js';
-
 const previousOperandTextElement = document.querySelector("[data-previous-operand]")
 const currentOperandTextElement = document.querySelector("[data-current-operand]")
 const numberButtons = document.querySelectorAll("[data-number]")
